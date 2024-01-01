@@ -1,0 +1,450 @@
+.fix
+    background: #910448
+    width: 200px 
+    height: 50px
+    font-size: 32px 
+    color: $light-color
+    text-align: center
+    position: fixed
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 99
+
+.preloader
+    background: $main-color
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    z-index: 10
+    svg 
+        stroke-width: 2px
+        height: 300px
+        display: flex
+        align-items: center
+    &__text
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &__title
+        opacity: 0
+
+.promo
+    padding-top: 155px
+    @include sm 
+        padding-bottom: 100px
+    
+.about
+    position: relative
+    height: 130vh
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    @include sm 
+        height: auto
+        padding-top: 500px
+        padding-bottom: 150px
+        overflow: hidden
+    @include xs 
+        padding-top: 320px
+    @include xxs 
+        padding: 202px 0 45px 0
+    &__bg 
+        position: absolute
+        width: 100vw
+        height: 130vh
+        left: 50%
+        top: 0
+        transform: translate(-50%) 
+        display: flex
+        align-items: flex-start
+        justify-content: center
+        overflow: hidden
+        @include sm 
+            left: 0
+            width: 100%
+            height: 100%
+            transform: translate(0, 0)
+            align-items: stretch
+    &__inner
+        position: relative
+        height: 470px 
+        width: 380px
+    &__photo
+        width: 100%
+        height: 100%
+        @include sm 
+            width: 100%
+            height: 100%
+    &__decor
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        @include sm 
+            display: none
+    &__wrap 
+        position: relative
+        max-width: 1240px
+        display: flex
+        flex-direction: column
+        align-items: center
+        @include sm 
+            max-width: 450px
+        @include xxs
+            padding: 0 16px
+            max-width: 100%
+    &__title
+        margin: 0 auto
+        margin-bottom: 20px
+        width: 600px
+        display: flex
+        flex-direction: column
+        color: $light-color!important
+        span 
+            align-self: flex-end
+        @include sm 
+            width: 100%
+        @include xxs 
+            width: 250px
+    &__list 
+        margin-bottom: 50px
+        display: flex
+        flex-direction: column
+        align-items: center 
+    &__item 
+        color: $light-color
+        &:not(:last-child)
+            margin-bottom: 10px
+        @include xxs 
+            text-align: center
+    &__link 
+        position: relative
+        text-transform: uppercase
+        font-family: $co-light
+        color: $light-color
+        &:after 
+            content: ''
+            position: absolute
+            bottom: -2px
+            left: 0
+            width: 100%
+            height: 1px
+            background: $accent-color
+        @include xxs 
+            font-size: 16px
+
+.lang-button
+    color: red
+    background: grey 
+
+.aim
+    min-height: 100vh
+    padding-bottom: 150px
+    padding-top: 150px
+    @include md 
+        padding-bottom: 80px
+        padding-top: 80px
+    &__title
+        margin-bottom: 60px
+        width: 100%
+        display: flex
+        overflow: hidden
+        @include sm 
+            margin-bottom: 60px
+            flex-direction: column
+        @include xxs 
+            max-width: 280px
+    &__first
+        display: flex
+        flex: 0 0 100%
+        justify-content: center
+        white-space: nowrap
+        @include sm 
+            flex-direction: column
+    &__second 
+        flex: 0 0 100%
+        display: flex
+        justify-content: center
+        white-space: nowrap
+        span
+            margin-left: 15px
+        @include sm 
+            flex-direction: column
+            span 
+                margin-left: 0
+    &__text
+        max-width: 585px
+        margin: 0 auto
+        margin-bottom: 100px
+        text-align: center
+        line-height: 135%
+        visibility: hidden
+
+.experience 
+    padding-top: 20px
+    position: relative
+    width: 100%
+    display: grid 
+    grid-template-columns: repeat(4, 1fr)
+    gap: 104px
+    @include md 
+        gap: 50px
+    @include sm 
+        gap: 30px
+    @include xs 
+        grid-template-columns: repeat(2, 1fr)
+    @include xxs 
+        grid-template-columns: 1fr
+    &__item
+        visibility: hidden
+    &__border
+        position: absolute
+        top: 0px
+        left: 0
+        width: 0
+        height: 1px
+        background: $accent-color
+        opacity: 0.5
+        @include sm 
+            width: 100%
+    &__num
+        margin-bottom: 10px
+        font-size: 50px 
+        font-family: $co-light
+        font-variant-numeric: lining-nums tabular-nums
+        @include sm 
+            font-size: 40px
+        @include xxs 
+            font-size: 30px
+
+.education
+    padding: 150px 0
+    @include md 
+        padding: 80px 0
+    &__title
+        margin-bottom: 60px
+        text-align: center
+    &__list 
+        position: relative
+        max-width: 550px 
+        margin: 0 auto
+        overflow: hidden
+        min-height: 80px
+    &__item
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        min-height: 75px
+        display: flex
+        align-items: center
+        justify-content: center
+        text-align: center
+        visibility: hidden
+
+.double-section
+    position: relative
+
+.results
+    position: relative
+    padding: 150px 0
+    width: 100vw
+    height: 100vh
+    background: $light-color
+    z-index: 2
+    @include sm 
+        position: relative
+        height: auto
+    @include xs 
+        padding-top: 80px
+        padding-bottom: 80px
+    &__title
+        margin-bottom: 100px
+        @include sm 
+            text-align: center
+        @include xxs 
+            margin-bottom: 60px
+    &__wrap
+        position: relative
+        display: flex
+        overflow: hidden
+        height: 200px
+    &__item
+        flex: 0 0 100%
+        height: 200px 
+        font-style: italic
+        color: $accent-color!important
+        letter-spacing: -0.04em
+        position: absolute
+        @include sm 
+            visibility: visible
+            text-align: center
+
+.training 
+    position: absolute
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100vw
+    padding: 50px 0 100px 0
+    background: $main-color
+    z-index: 1
+    @include sm 
+        position: relative
+        height: auto
+    @include xxs        
+        padding-bottom: 40px
+    .container
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+    &__title
+        height: 100px
+        text-align: center
+        color: $light-color!important
+        @include sm 
+            margin-top: 60px
+            position: relative
+            height: auto
+
+.training-item 
+    padding: 20px 0
+    position: relative
+    cursor: pointer
+    &:after 
+        content: ''
+        position: absolute
+        top: 0px
+        left: 0
+        width: 100%
+        height: 1px
+        background: #F2F2F2
+        opacity: 0.5
+    &:last-child
+        &:before 
+            content: ''
+            position: absolute
+            bottom: 0px
+            left: 0
+            width: 100%
+            height: 1px
+            background: #F2F2F2
+            opacity: 0.5
+    &:hover
+        .training-item__descr
+            opacity: 1
+            z-index: 2
+            transition: opacity 0.3s ease-in-out
+        
+        .training-item__title
+            opacity: 0
+            
+    &__title
+        position: relative
+        font-family: $gilroy
+        font-size: 18px
+        color: #949393
+        height: 72px
+        display: flex
+        align-items: center
+        transition: opacity 0.3s ease
+    &__descr
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        height: 72px
+        display: flex
+        align-items: center
+        color: $light-color
+        opacity: 0
+        z-index: -1
+        text-overflow: ellipsis
+        @include sm 
+            font-size: 16px
+        @include xs 
+            font-size: 14px
+
+.double-section2
+    position: relative
+
+.contacts
+    width: 100vw
+    height: 100%
+    position: absolute
+    top: 0 
+    left: 0
+    display: flex 
+    align-items: center
+    padding-bottom: 100px
+    padding-top: 200px
+    z-index: 2
+    background: $main-color
+    @include sm 
+        position: relative
+        padding: 40px 0 90px 0
+    &__wrap
+        margin-top: 80px
+        margin-left: auto
+        width: fit-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        @include sm 
+            margin-top: 100px
+        @include xxs 
+            margin-left: 0
+            margin-top: 60px
+    &__title
+        color: $light-color!important
+        @include sm 
+            max-width: 600px
+    &__link 
+        &:not(:last-child)
+            margin-bottom: 10px
+        color: $light-color
+
+.reviews
+    min-height: 100vh
+    width: 100vw
+    position: relative
+    padding-top: 150px
+    background: $light-color
+    z-index: 3
+    @include md 
+        padding-top: 100px
+    @include sm 
+        min-height: none
+    &__row
+        width: 100%
+        overflow: hidden
+    &__wrap 
+        padding-top: 20px
+        border-top: 1px solid rgba(145, 4, 72, 0.5)
+        display: flex
+    &__chapter
+        margin-right: 3.4%
+        flex: 0 0 30%
+        color: $main-color
+        @include sm 
+
+            font-size: 16px
+        @include xxs 
+            flex: 0 0 55%
+            margin-right: 5%
+        
+    &__name 
+        margin-top: 15px
+        color: rgba(17, 12, 13, 0.50)
+    &__title
+        margin-bottom: 100px
+        text-align: center
+
+
